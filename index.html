@@ -1,39 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <title>Dropdown navigation</title>
+  <link rel="stylesheet" href="./css/styles.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <header>
+    <a class="logo" href="#"><img  src="./images/logo.svg" alt="logo"></a>
+    
+    <nav>
+      
+      <ul id="NavMenu" class="nav__menu">
+        
 
-  Features
-  Company
-  Careers
-  About
+        <button class="icon__close" type="button" onclick="closeMenu()"><img  src="./images/icon-close-menu.svg" alt="icon close menu"></button>
+         <li><a id="btn_features" href="#">Features<span></span></a>
+           <ul id="submenuF" class="nav__features">
+             <li><a href="#"><img src="./images/icon-todo.svg" alt="todo"> Todo List</a></li>
+             <li><a href="#"><img src="./images/icon-calendar.svg" alt="calendar"> Calendar</a></li>
+             <li><a href="#"><img src="./images/icon-reminders.svg" alt="reminder"> Reminder</a></li>
+             <li><a href="#"><img src="./images/icon-planning.svg" alt="planning"> Planning</a></li>
+           </ul>
+         </li>
+         <li><a id="btn_company" href="#">Company<span></span></a>
+            <ul id="submenuC" class="nav__company">
+             <li><a href="#">History</a></li>
+             <li><a href="#">Our Team</a></li>
+             <li><a href="#">Blog</a></li>
+           </ul>
+         </li>
+         <li><a href="#">Careers</a></li>
+         <li><a href="#">About</a></li>
+        
 
-  Login
-  Register
 
-  Make remote work
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
 
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <li class="nav__login"><a href="#">Login</a></li>
+        <li class="nav__register"><a href="#">Register</a></li>
+
+      </ul>
+    </nav>
+    
+    <button class="icon__menu" type="button" onclick="openMenu()"><img  src="./images/icon-menu.svg" alt="icon menu"></button>
+  </header>
+
+  <main>
+    <section>
+      <h1>Make <br>remote work</h1>
+      <p>Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.</p>
+      <a href="#">Learn more</a>
+      <div>
+        <img src="./images/client-databiz.svg" alt="dayabiz">
+        <img src="./images/client-audiophile.svg" alt="audio phile">
+        <img src="./images/client-meet.svg" alt="meet">
+        <img src="./images/client-maker.svg" alt="maker">
+      </div>
+    </section>
+    <div class="img__hero" aria-label="Hero IMG"></div>
+
+
+
+  </main>
+
+
+
+  <footer class="attribution">
+    Coded by <a href="#">Miguel Hernandez</a>.
+  </footer>
+
+  <script src="./js/script.js"></script>
 </body>
+
 </html>
