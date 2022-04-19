@@ -53,6 +53,7 @@ header{
     background-color: var(--AlmostWhite);
     padding: 0 5rem;
     position: fixed;
+    top: 0;
 }
 nav{
     margin: 0;
@@ -158,6 +159,7 @@ nav ul li:hover ul{
     opacity: 1;
     height: auto;
     padding: 2rem;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
 }
 
@@ -332,22 +334,111 @@ nav ul li ul a img {
 /******************** Main Content ********************************************/
 main{
     display: grid;
-    grid-gap: 10rem ;
-    margin: auto;
-    /* background-color: aqua; */
-    
    
+    margin: auto;
     
-}
+    background-color: var(--AlmostWhite);
+}   
+   
+ /* MOBILE */
 
+@media (max-width :767px ) {
+    main{
+        grid-template-rows: 1fr 1fr;
+        margin-top: 6rem;
+        width: 100%;
+        gap: 2rem;
+
+    }
+
+    .img__hero{
+        background: url(/images/image-hero-mobile.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        grid-row: 1/2;
+        width: 100%;
+    }
+    
+    main section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main section h1 {
+        font-size: 35px;
+        margin-top: 2rem;
+        text-align: center;
+        
+    }
+
+    main section p {
+        font-size: 15px;
+        color: var(--MediumGray);
+        margin: 10px 0 10px 0;
+        line-height: 2rem;
+        text-align: center;
+        padding: 2rem;
+        
+    
+    }
+
+    main section a {
+        
+        display: flex;
+        width: 14rem;
+        height: 3.5em;
+        background-color: var(--AlmostBlack);
+        color: var(--AlmostWhite);
+        border-style: solid;
+        border-width: 2px;
+        border-color: var(--AlmostBlack);
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    main section a:active{
+        border-color: var(--MediumGray);
+        background-color: var(--AlmostWhite);
+        color: var(--AlmostBlack);
+    
+    }
+
+    main section div {
+        display: flex;
+        justify-content: space-between;
+       margin-top: 3rem;
+       margin-bottom: 3rem; 
+       width: 90%;
+       
+
+    }
+
+    main section div img {
+        height: 1.5rem;
+
+    }
+}    
+
+
+/* Desktop */
 
 @media (min-width : 768px) {
     main{
+        grid-gap: 10rem ;
         padding: 0;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 60rem;
         max-width: 1100px;
-    min-width: 900px;
+        min-width: 900px;
+        margin-top: 10rem;
+        margin-bottom: 15rem;
+        
     }
 
     .img__hero{
@@ -355,60 +446,66 @@ main{
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+        
+    }
+
+    main section h1 {
+        font-size: 7rem;
+        margin: auto 0;
     }
     
-}
+    main section p {
+        font-size: 18px;
+        color: var(--MediumGray);
+        margin: auto 0;
+        line-height: 3rem;
+    
+    }
 
+    main section {
+        display: grid;
+        grid-template-rows: 3fr 1fr 1fr 1fr;
+        
+    }
+    
+    
+    main section a {
+        margin: auto 0;
+        display: flex;
+        width: 15rem;
+        height: 3.5em;
+        background-color: var(--AlmostBlack);
+        color: var(--AlmostWhite);
+        border-style: solid;
+        border-width: 2px;
+        border-color: var(--AlmostBlack);
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+    }
+    
+    main section a:hover{
+        border-color: var(--MediumGray);
+        background-color: var(--AlmostWhite);
+        color: var(--AlmostBlack);
+    
+    }
+    
+    main section div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-self: end;
+    }
 
-main section {
-    display: grid;
-    grid-template-rows: 3fr 1fr 1fr 1fr;
+    .ref {
+       display: block;
+      }
+    
     
 }
 
-main section h1 {
-    font-size: 7rem;
-    margin: auto 0;
-    
-    
-    
-}
 
-main section p {
-    font-size: 18px;
-    color: var(--MediumGray);
-    margin: auto 0;
-
-}
-
-main section a {
-    margin: auto 0;
-    display: flex;
-    width: 15rem;
-    height: 3.5em;
-    background-color: var(--AlmostBlack);
-    color: var(--AlmostWhite);
-    border-style: solid;
-    border-width: 2px;
-    border-color: var(--AlmostBlack);
-    border-radius: 15px;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-}
-
-main section a:hover{
-    border-color: var(--MediumGray);
-    background-color: var(--AlmostWhite);
-    color: var(--AlmostBlack);
-
-}
-
-main section div {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-self: end;
-}
 
 
 
